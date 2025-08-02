@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文章详情 - ERTJ的博客</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+   <script>
+    window.markedPromise = new Promise(resolve => {
+        const script = document.createElement('script');
+        script.src = 'https://cdn.jsdelivr.net/npm/marked@4.0.0/marked.min.js';
+        script.onload = () => {
+             window.marked = marked; 
+             resolve();
+        };
+        document.head.appendChild(script);
+    });
+</script>
+</head>
+<body>
+    <div class="container article-page">
+        <aside class="sidebar">
+            <div class="avatar">
+                <img src="https://s2.loli.net/2025/08/02/rlVAXREHkPKLSfB.png" alt="ERTJ的头像">
+            </div>
+            <h1 class="name">ERTJ</h1>
+            <div class="skills">
+                <span>Python</span>
+                <span>Scratch</span>
+            </div>
+            <div class="links">
+                <a href="https://space.bilibili.com/1520898137?spm_id_from=333.1007.0.0" target="_blank" class="social-link">
+                    <i class="fab fa-bilibili"></i> BiliBili主页
+                </a>
+                <a href="https://www.ccw.site/student/627b7cb4353b0e6d7ffca104" target="_blank" class="social-link">
+                    <i class="fas fa-globe"></i> 共创世界主页
+                </a>
+            </div>
+        </aside>
+        
+        <main class="content article-content">
+            <div class="article-header">
+                <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> 返回首页</a>
+                <h1 id="article-title" class="article-title"></h1>
+                <div id="article-meta" class="article-meta"></div>
+            </div>
+            
+            <div id="article-body" class="article-body">
+                <div class="loading">
+                    <div class="spinner"></div>
+                    <p>加载文章中...</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/marked.min.js"></script>
+    <script src="js/article.js"></script>
+</body>
+</html>
